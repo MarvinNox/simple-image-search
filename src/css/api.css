@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+.deep-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+.form input[name='search-text'] {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 272px;
+  height: 40px;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #808080;
+  padding-left: 16px;
+}
+.form input[name='search-text']:hover {
+  border: 1px solid #000;
+}
+.form input[name='search-text']:focus {
+  border: 1px solid #4e75ff;
+  color: #2e2f42;
+}
+
+button[type='submit'] {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 91px;
+  height: 40px;
+  background: #4e75ff;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  margin-left: 8px;
+}
+button[type='submit']:hover {
+  background: #6c8cff;
+}
+
+.gallery {
+  width: 1128px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.gallery_item {
+  width: calc((100% - 48px) / 3);
+  background: #fff;
+  box-shadow: 10px 10px 20px -7px rgba(0, 0, 0, 0.45);
+  transition: scale 250ms ease-in, box-shadow 250ms ease-in;
+}
+.gallery_item:hover {
+  scale: 102%;
+  box-shadow: 10px 10px 20px -7px rgba(0, 0, 0, 0.6);
+}
+.gallery_item_box {
+  border-bottom: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #808080;
+  width: 360px;
+  height: 48px;
+}
+.gallery_img {
+  border: 1px solid #808080;
+  border-bottom: none;
+  object-fit: cover;
+  max-height: 200px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.gallery_item_list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  color: #2e2f42;
+  padding: 4px 20px 4px 25px;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+}
+.gallery_item_list li {
+  text-align: center;
+}
+p {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33333;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Loader code */
+span {
+  margin: 0 auto;
+}
+.sl-image img {
+  border-radius: 24px;
+}
+.iziToast > .iziToast-close {
+  background: url(../img/x-bttn.svg) no-repeat 50% 50% !important;
+}
