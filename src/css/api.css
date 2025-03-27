@@ -3,6 +3,7 @@
 }
 .deep-search {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-bottom: 32px;
@@ -29,19 +30,30 @@
   color: #2e2f42;
 }
 
-button[type='submit'] {
+div.deep-search button {
   border-radius: 8px;
   padding: 8px 16px;
-  width: 91px;
-  height: 40px;
+  min-width: 91px;
+  min-height: 40px;
   background: #4e75ff;
   font-weight: 500;
   color: #fff;
   border: none;
   margin-left: 8px;
+  transition: translate 400ms ease-out, box-shadow 200ms ease-in-out;
+  box-shadow: 2px 2px 10px -2px rgba(0, 0, 0, 0.71);
 }
-button[type='submit']:hover {
+div.deep-searchbutton:hover {
   background: #6c8cff;
+  translate: 0 -4px;
+  box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.71);
+}
+div.deep-search button:active {
+  translate: 0 -2px;
+}
+
+button[name='load-more'] {
+  margin-top: 32px;
 }
 
 .gallery {
@@ -61,19 +73,15 @@ button[type='submit']:hover {
   box-shadow: 10px 10px 20px -7px rgba(0, 0, 0, 0.6);
 }
 .gallery_item_box {
-  border-bottom: 1px solid #808080;
-  border-left: 1px solid #808080;
-  border-right: 1px solid #808080;
   width: 360px;
   height: 48px;
 }
 .gallery_img {
-  border: 1px solid #808080;
   border-bottom: none;
   object-fit: cover;
   max-height: 200px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 .gallery_item_list {
   display: flex;
