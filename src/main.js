@@ -49,7 +49,7 @@ async function searchSubmit(evt) {
             return;
         };
         createMarkup(resp.data.hits);
-        loadBttn.showBttn();
+        resp.data.totalHits < pageLimit ? loadBttn.hideBttn() : loadBttn.showBttn();
         page += 1;
     } catch (error) {
         iziToast.error({
